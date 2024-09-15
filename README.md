@@ -1,6 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Coach Francis Site
+
+This is website created for a talent coach. The Readme is still a work in progress. It will be updated as the project progresses, hence the lack of content and details in regards to connecting to the Ghost CMS.
+
+## Tech Stack
+
+This site is made with Next.js 14, Tailwind CSS, Typescript, and Ghost CMS. GitHub is used for version control. Project is deployed on a private server running Coolify to handle automated builds and deployments.
 
 ## Getting Started
+
+To run locally, clone the repo and run the following commands:
 
 First, run the development server:
 
@@ -16,21 +24,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy on VPS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The private server used in this project there are 2 servers, on production and one staging having the config of 4GB RAM, 2vCPU, 40GB SSD.
 
-## Learn More
+## Deploy Coolify
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For this purpose I used Coolify, a open source alternative of Vercel that allows you to deploy your apps to a private server in an automated manner. Its a open source project and you can find the repo [here](https://github.com/coollabsio/coolify). The documentation is also available [here](https://coolify.io/docs/getting-started). After following the instructions i setup a project on Coolify which is connected to this repo. So when i push to the master branch, Coolify will automatically build and deploy the app to the server.
