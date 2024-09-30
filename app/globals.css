@@ -2,26 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root { 
+  --ff: "Montserrat", system-ui;
+  --ff2: "Barlow Condensed", system-ui;
+  --h1: bold var(--fs-xl)/2em var(--ff2);
+  --h2: bold var(--fs-lg)/1.6em var(--ff2);
+  --h3: bold var(--fs-md)/1.2em var(--ff2);
+  --h4: bold var(--fs-sm)/1em var(--ff2);
+  --p: normal var(--fs-base)/1em var(--ff);
+
+  --primary: hsl(208, 55%, 47%);
+  --secondary: hsl(49, 99%, 55%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 10%);
 }
 
-@media (prefers-color-scheme: dark) {
+/* For browsers that support clamp */
+@supports (font-size: clamp(1rem, 1vi, 1rem)) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+      --fs-sm: clamp(0.8rem, -0.09vi + 0.82rem, 0.75rem);
+      --fs-base: clamp(1rem, 0vi + 1rem, 1rem);
+      --fs-md: clamp(1.25rem, 0.15vi + 1.21rem, 1.33rem);
+      --fs-lg: clamp(1.56rem, 0.39vi + 1.47rem, 1.78rem);
+      --fs-xl: clamp(1.95rem, 0.76vi + 1.76rem, 2.37rem);
+      --fs-xxl: clamp(2.44rem, 1.3vi + 2.12rem, 3.16rem);
+      --fs-xxxl: clamp(3.05rem, 2.1vi + 2.53rem, 4.21rem);
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  }
+  /* For browsers that don't support clamp */
+  @supports not (font-size: clamp(1rem, 1vi, 1rem)) {
+  :root {
+          --fs-sm: 0.8rem;
+          --fs-base: 1rem;
+          --fs-md: 1.25rem;
+          --fs-lg: 1.56rem;
+          --fs-xl: 1.95rem;
+          --fs-xxl: 2.44rem;
+          --fs-xxxl: 3.05rem;
+  }
+  @media screen and (min-width: 1280px) {
+      :root {
+              --fs-sm: 0.75rem;
+              --fs-base: 1rem;
+              --fs-md: 1.33rem;
+              --fs-lg: 1.78rem;
+              --fs-xl: 2.37rem;
+              --fs-xxl: 3.16rem;
+              --fs-xxxl: 4.21rem;
+      }
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--black);
+  background: var(--white);
+  font-family: var(--ff);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h2);
+}
+
+h3 {
+    font: var(--h3);
+}
+
+h4 {
+    font: var(--h4);
+}
+
+p {
+    font: var(--p);
 }

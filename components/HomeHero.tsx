@@ -1,21 +1,35 @@
+// components/HomeHero.tsx
 import Image from 'next/image';
+import HeroImage from '@/public/hero.jpg';
 
 const HomeHero = () => {
+  const heroBannerContent = [
+    "Hyvää Huomenta",
+    "I'm Francis. A Coach, Mentor and avid football fan.",
+    "Let's navigate your journey to Finland, step by step.",
+  ];
+
   return (
-        <section className="relative min-w-full lg:min-h-[50vh] md:min-h-[25vh]">
-      <Image 
-        src="/hero.jpg"
-        alt="" 
+    <section className="relative h-[85vh] sm:h-[50vh]">
+      <Image
+        src={HeroImage}
+        alt=""
         layout="fill"
         objectFit="cover"
-        priority
+        style={{ marginLeft: "auto" }}
       />
-            <div className="absolute top-3/4 left-10 transform -translate-y-1/2 text-white text-shadow-lg space-y-4">
-                <span className="bg-blue-600 px-4 py-2 block text-3xl font-semibold">Hyvää Huomenta</span>
-                <span className="bg-blue-600 px-4 py-2 block text-3xl font-semibold">I&#39;m Francis. A Coach, Mentor and avid football fan.</span>
-                <span className="bg-blue-600 px-4 py-2 block text-3xl font-semibold">Let&#39;s navigate your journey to Finland, step by step.</span>
-            </div>
-        </section>
+        <div className="absolute top-1/2 left-2 right-2 sm:left-10 sm:right-10 lg:left-20 -translate-y-1/4 flex flex-col gap-4 lg:gap-10">
+          {heroBannerContent.map((text, index) => (
+            <span
+              key={index}
+              className="bg-secondary inline px-4 py-2 w-fit text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-900 " 
+            >
+              {text}<br />
+            </span>
+            
+          ))}
+        </div>
+    </section>
   );
 };
 export default HomeHero;

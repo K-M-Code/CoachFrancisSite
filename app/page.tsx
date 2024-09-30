@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import HomeHero from "@/components/HomeHero";
-
+import HomeServices from "@/components/HomeServices";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
     <div>
       <Header/>
       <HomeHero/>
+      <HomeServices/>
     </div>
   );
 }
