@@ -54,7 +54,7 @@ const Testimonials = () => {
 
   return (
     <section className="testimonials bg-primary py-20 text-white">
-      <h2 className="mb-12 text-center text-4xl font-bold">
+      <h2 className="mb-12 text-center">
         What people say about my services?
       </h2>
 
@@ -68,7 +68,7 @@ const Testimonials = () => {
               className="min-w-[75vw] sm:min-w-[35vw] lg:min-w-[30vw] flex-col gap-10 lg:flex-row bg-white text-black p-8 shadow-xl my-10 hover:shadow-2xl transform hover:scale-105 duration-300 rounded-xl"
             >
               <div className="flex flex-col gap-4">
-                <p className="text-lg">{testimonial.quote}</p>
+                <p className="">{testimonial.quote}</p>
                 <div className="flex gap-6">
                   <Image
                     src={testimonial.photo}
@@ -78,8 +78,8 @@ const Testimonials = () => {
                     className="rounded-full"
                   />
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-xl font-bold">{testimonial.name}</h3>
-                    <p className="text-lg font-medium">{testimonial.position}</p>
+                    <h3 className="">{testimonial.name}</h3>
+                    <p className="">{testimonial.position}</p>
                   </div>
                 </div>
               </div>

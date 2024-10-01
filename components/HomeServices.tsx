@@ -18,8 +18,8 @@ const HomeServices = () => {
         <div className='container mx-auto grid grid-cols-1 gap-12 px-8 lg:px-20 2xl:px-0 lg:grid-cols-2'>
             <div>
             <div className="absolute -left-8 sm:-left-52 bg-primary p-10 w-4/5 h-3/5 sm:h-1/5 lg:w-2/4 lg:h-3/5 xl:h-2/5 -z-50 rounded-3xl opacity-10"></div>
-            <h1 className='mb-4 text-2xl font-bold'>How can I help you?</h1>
-            <p className='text-lg'>
+            <h2 className='mb-4'>How can I help you?</h2>
+            <p className=''>
                 I can help you with your personal and professional goals, and
                 I&#39;m here to support you in any way I can. Lorem ipsum dolor
                 sit amet consectetur adipisicing elit. Ea quidem id, quas aut
