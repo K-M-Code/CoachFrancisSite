@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Article2 from '@/public/images/article2.jpg'
 import Article3 from '@/public/images/article3.jpg'
 import Article4 from '@/public/images/article4.jpg'
+import { StaticImageData } from 'next/image';
+
 
 
 type BlogArticle = {
