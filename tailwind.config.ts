@@ -23,6 +23,8 @@ theme: {
 		secondary: 'var(--secondary)',
 		background: 'hsl(var(--background))',
 		foreground: 'hsl(var(--foreground))',
+		svgPrimary: 'filter(var(--svgPrimary))',
+		svgSecondary: 'filter(var(--svgSecondary))',
 		card: {
 		DEFAULT: 'hsl(var(--card))',
 		foreground: 'hsl(var(--card-foreground))'

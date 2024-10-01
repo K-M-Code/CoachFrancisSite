@@ -19,7 +19,11 @@
   --secondary: hsl(49, 99%, 55%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 10%);
+
+  --svgPrimary: invert(37%) sepia(65%) saturate(494%) hue-rotate(175deg) brightness(94%) contrast(88%);
+  --svgSecondary: invert(79%) sepia(56%) saturate(1099%) hue-rotate(353deg) brightness(104%) contrast(103%);
 }
+
 
 /* For browsers that support clamp  */
 @supports (font-size: clamp(1rem, 1vi, 1rem)) {

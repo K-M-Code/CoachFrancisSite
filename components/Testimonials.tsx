@@ -54,6 +54,7 @@ const Testimonials = () => {
 
   return (
     <section className="testimonials bg-primary py-20 text-white">
+      <div className="container mx-auto">
       <h2 className="mb-12 text-center">
         What people say about my services?
       </h2>
@@ -65,7 +66,7 @@ const Testimonials = () => {
           {testimonialsData.map((testimonial, index) => (
             <div
               key={index}
-              className="min-w-[75vw] sm:min-w-[35vw] lg:min-w-[30vw] flex-col gap-10 lg:flex-row bg-white text-black p-8 shadow-xl my-10 hover:shadow-2xl transform hover:scale-105 duration-300 rounded-xl"
+              className="min-w-[75vw] sm:min-w-[45vw] lg:min-w-[30vw] flex-col gap-10 lg:flex-row bg-white text-black p-8 shadow-xl my-10 hover:shadow-2xl transform hover:scale-105 duration-300 rounded-xl"
             >
               <div className="flex flex-col gap-4">
                 <p className="">{testimonial.quote}</p>
@@ -86,6 +87,7 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );
