@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import LogoImage from '@/public/logo.svg'
+import LogoImage from '@/public/images/logo.svg'
 
 const Header = () => {
   const siteLinks = [

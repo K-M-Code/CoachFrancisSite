@@ -1,6 +1,6 @@
 // components/HomeHero.tsx
 import Image from 'next/image';
-import HeroImage from '@/public/hero.jpg';
+import HeroImage from '@/public/images/hero.jpg';
 
 const HomeHero = () => {
   const heroBannerContent = [
@@ -22,7 +22,7 @@ const HomeHero = () => {
           {heroBannerContent.map((text, index) => (
             <span
               key={index}
-              className="bg-secondary inline px-4 py-2 w-fit text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-900 " 
+              className="bg-secondary box-decoration-clone px-4 py-2 w-fit text-3xl lg:text-4xl font-semibold text-slate-900 " 
             >
               {text}<br />
             </span>
