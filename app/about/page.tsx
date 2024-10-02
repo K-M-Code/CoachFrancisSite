@@ -1,19 +1,29 @@
 import Header from "@/components/Header";
+import Image from "next/image";
+import Footer from "@/components/Footer";
+import AboutPic from '@/public/images/about.jpeg';
 
 const About = () => {
     return (
-        <div>
+        <section className="about-page">
             <Header/>
-            <div className="container mx-auto">
-                <div className="flex flex-col items-center justify-center">
-                    <h1 className="text-center text-4xl font-bold">About Me</h1>
-                    <p className="text-center text-xl">
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, doloremque, voluptate, quis, quos, consequatur, velit, ipsa, doloribus, asperiores, fugiat, laborum, voluptas. Doloremque, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, doloremque, voluptate, quis, quos, consequatur, velit, ipsa, doloribus, asperiores, fugiat, laborum, voluptas. Doloremque, quidem.
-                    </p>
+            <div className="container mx-auto my-20 px-4">
+                <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
+                    <div className="about-image lg:basis-1/2">
+                        <Image src={AboutPic} alt="About Image" width={600} height={400}/>
+                    </div>
+                    <div className="about-content lg:basis-1/2">
+                        <h1>About Me</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eius nam commodi consequatur voluptatum praesentium itaque adipisci voluptate, aut et quibusdam placeat nisi at eligendi nesciunt ab excepturi porro eveniet?
+                            A recusandae voluptatum sequi odit id accusantium maiores, magni ipsa cupiditate cum neque, inventore eius laudantium in at nulla dicta vero est repellat eum quae laborum doloribus necessitatibus. Excepturi, aliquam.
+                            Dolorum pariatur minus suscipit perferendis nobis dolores ducimus cupiditate, dicta, ea facilis, asperiores quidem hic fugiat obcaecati quibusdam a officia sequi ab magnam quaerat sit. A reiciendis culpa facere perferendis.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+            <Footer/>
+        </section>
     )
 }
 
