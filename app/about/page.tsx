@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import AboutPic from '@/public/images/about.jpeg';
+import { Button } from '@/components/ui/button'
 
 const About = () => {
     return (
@@ -21,6 +22,11 @@ const About = () => {
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className="container mx-auto flex justify-center">
+                <Button variant='default' size='xl'>
+                        Reach out for a free session
+                </Button>
             </div>
             <Footer/>
         </section>
