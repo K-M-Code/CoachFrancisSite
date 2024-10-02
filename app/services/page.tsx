@@ -1,10 +1,10 @@
 import Header from '@/components/Header'
 import Image from 'next/image'
 import Footer from '@/components/Footer'
-import ServicePic1 from '@/public/images/about.jpeg'
-import ServicePic2 from '@/public/images/article2.jpg'
-import ServicePic3 from '@/public/images/article3.jpg'
-import ServicePic4 from '@/public/images/article4.jpg'
+import ServicePic1 from '@/public/images/services/Services2.jpg'
+import ServicePic2 from '@/public/images/services/Services3.jpg'
+import ServicePic3 from '@/public/images/services/Services7.jpg'
+import ServicePic4 from '@/public/images/services/Services8.jpg'
 
 const Services = () => {
     return (
@@ -13,7 +13,7 @@ const Services = () => {
         <div className='container mx-auto p-8'>
             <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
 
-            <div className='grid grid-cols-2 gap-4 h-[450px] sm:h-[600px] lg:h-[750px]'>
+            <div className='grid grid-cols-2 gap-4 max-h-[450px] sm:max-h-[750px]'>
 
                 <div className='col-span-1 row-span-2 h-full'>
                     
