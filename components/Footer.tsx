@@ -6,7 +6,8 @@
     import LinkedinIcon from '@/public/images/icons/linkedin.svg'
     import InstagramIcon from '@/public/images/icons/instagram.svg'
 
-    import { Button } from '@/components/ui/button'
+    // import { Button } from '@/components/ui/button'
+    import ContactForm from '@/components/ContactForm'
 
     interface SocialLink {
     icon: string
@@ -89,9 +90,8 @@
                 <p>
                     <a href='mailto:coachoye@coachme2.fi'>coachoye@coachme2.fi</a>
                 </p>
-                <Button variant='default' size='lg'>
-                    Reach out for a free session
-                </Button>
+                
+                <ContactForm showTrigger={true} />
                 </div>
             </div>
             </div>

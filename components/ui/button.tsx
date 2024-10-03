@@ -16,7 +16,7 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-primary text-white uppercase shadow transition-all duration-300 hover:text-black hover:scale-105 hover:bg-secondary hover:shadow-xl",
+          "bg-primary text-white uppercase shadow transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-white hover:text-primary",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
@@ -25,6 +25,7 @@ const buttonVariants = cva(
         sm: "h-8 rounded-full px-3 text-xs",
         lg: "h-16 rounded-full px-8",
         xl: "h-20 rounded-full px-12 text-2xl",
+        lg2: "h-18 rounded-full px-8 py-3 hover:bg-secondary hover:text-black", 
         icon: "h-9 w-9",
       },
     },

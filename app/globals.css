@@ -109,6 +109,10 @@ p {
     font: var(--p);
 }
 
+input {
+    font: var(--p);
+}
+
 @layer base {
   :root { 
     --background: 0 0% 100%; 
