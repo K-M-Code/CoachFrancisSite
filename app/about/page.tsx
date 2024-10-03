@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import AboutPic from '@/public/images/about.jpeg';
-import { Button } from '@/components/ui/button'
+// import { Button } from '@/components/ui/button'
+import ContactForm from "@/components/ContactForm";
 
 const About = () => {
     return (
@@ -24,9 +25,7 @@ const About = () => {
                 </div>
             </div>
             <div className="container mx-auto flex justify-center">
-                <Button variant='default' size='xl'>
-                        Reach out for a free session
-                </Button>
+                <ContactForm showTrigger={true}/>
             </div>
             <Footer/>
         </section>

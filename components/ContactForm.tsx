@@ -107,7 +107,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ trigger, showTrigger = true }
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        {trigger ?? <Button variant='secondary' size='lg' onClick={() => setOpen(true)}>Reach out for a Free Session</Button>} 
+        {trigger ?? <Button variant='default' size='lg' onClick={() => setOpen(true)}>Reach out for a Free Session</Button>} 
       </DialogTrigger>
       <DialogContent className="fixed inset-0 z-50 flex items-center justify-center p-4">
         <div className="relative w-full max-w-[500px] bg-white rounded-lg shadow-lg">

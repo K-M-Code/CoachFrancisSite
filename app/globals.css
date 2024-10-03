@@ -14,6 +14,8 @@
   --h3: bold var(--fs-md)/1.6em var(--ff2);
   --h4: bold var(--fs-base)/1.5em var(--ff2);
   --p: normal var(--fs-base)/1.5em var(--ff);
+  --input: normal var(--fs-base)/1.5em var(--ff);
+  --label: normal var(--fs-base)/1.5em var(--ff2);
 
   --primary: hsl(208, 55%, 47%);
   --secondary: hsl(49, 99%, 55%);
@@ -110,7 +112,10 @@ p {
 }
 
 input {
-    font: var(--p);
+    font: var(--input);
+}
+label {
+    font: var(--label);
 }
 
 @layer base {
