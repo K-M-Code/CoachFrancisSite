@@ -25,7 +25,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ trigger, showTrigger = true }
     e.preventDefault();
 
     try {
-      const response = await fetch('/api/send', {
+      const response = await fetch('/api/send-mail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ trigger, showTrigger = true }
         toast({
           title: 'Success',
           description: 'Email sent successfully! Will get back to you shortly.',
-          variant: 'default',
+          variant: 'success',
         });
         setName('');
         setEmail('');
