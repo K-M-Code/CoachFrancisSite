@@ -10,8 +10,8 @@ const About = () => {
             <Header/>
             <div className="container mx-auto my-20 px-4">
                 <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
-                    <div className="about-image lg:basis-1/2">
-                        <Image src={AboutPic} alt="About Image" width={600} height={400}/>
+                    <div className="about-image lg:basis-1/2 ">
+                        <Image src={AboutPic} alt="About Image" width={600} height={400} className="rounded-2xl"/>
                     </div>
                     <div className="about-content lg:basis-1/2">
                         <h1>About Me</h1>
