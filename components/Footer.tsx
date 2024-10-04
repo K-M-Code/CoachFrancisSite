@@ -2,7 +2,7 @@
     import Link from 'next/link' // Import the Link component
     import LogoImage from '@/public/images/logo.svg'
     import YouTubeIcon from '@/public/images/icons/youtube.svg'
-    import TwitterIcon from '@/public/images/icons/twitter.svg'
+    // import TwitterIcon from '@/public/images/icons/twitter.svg'
     import LinkedinIcon from '@/public/images/icons/linkedin.svg'
     import InstagramIcon from '@/public/images/icons/instagram.svg'
 
@@ -20,15 +20,15 @@
         { href: '/', label: 'Home' },
         { href: '/about', label: 'About Me' },
         { href: '/services', label: 'Services' },
-        { href: '/blog', label: 'Blog' },
+        // { href: '/blog', label: 'Blog' },
         { href: '/contact', label: 'Contact Me' }
     ]
 
     const socialLinks: SocialLink[] = [
-        { icon: YouTubeIcon, alt: 'Coach Oye Youtube', href: '/contact' },
-        { icon: TwitterIcon, alt: 'Coach Oye Twitter', href: '#' },
-        { icon: LinkedinIcon, alt: 'Coach Oye LinkedIn', href: '#' },
-        { icon: InstagramIcon, alt: 'Coach Oye Instagram', href: '#' }
+        { icon: YouTubeIcon, alt: 'Coach Oye Youtube', href: 'https://www.youtube.com/@CoachOye' },
+        // { icon: TwitterIcon, alt: 'Coach Oye Twitter', href: '#' },
+        { icon: LinkedinIcon, alt: 'Coach Oye LinkedIn', href: 'https://www.linkedin.com/in/francisoyeyiola/' },
+        { icon: InstagramIcon, alt: 'Coach Oye Instagram', href: 'https://www.instagram.com/coachoye_productions/' },
     ]
 
     return (
@@ -75,7 +75,8 @@
                 <h3 className='mb-4'>Quick Links</h3>
                 <div className='flex flex-col gap-4'>
                 {siteLinks.map((link, index) => (
-                    <Link href={link.href} key={index}>
+                    <Link href={link.href} key={index} target="_blank">
+                    
                     <p>{link.label}</p>
                     </Link>
                 ))}

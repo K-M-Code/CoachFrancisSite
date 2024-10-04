@@ -16,7 +16,7 @@ const Header: React.FC = () => {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Me' },
     { href: '/services', label: 'Services' },
-    { href: '/blog', label: 'Blog' },
+    // { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact Me' },
   ];
 
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
         {/* Logo */}
         <Link href="/" aria-label="Home">
           <Image
-            src="/logo.svg"
+            src="@public/images/logo.svg"
             alt="Coach Oye Logo"
             width={150}
             height={140}
