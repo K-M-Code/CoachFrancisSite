@@ -47,7 +47,7 @@ return (
         className='group rounded-lg bg-primary px-6 py-4 text-white transition-all duration-300 hover:bg-secondary hover:text-black hover:scale-105'
         >
         View More Articles
-        <span className='ml-2 text-xl text-secondary transition-all duration-300 group-hover:text-black hover:scale-105'>
+        <span className='ml-2 text-secondary transition-all duration-300 group-hover:text-black hover:scale-105'>
             ↗
         </span>
         </a>

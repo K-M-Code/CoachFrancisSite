@@ -111,6 +111,10 @@ p {
     font: var(--p);
 }
 
+li {
+    font: var(--p);
+}
+
 input {
     font: var(--input);
 }

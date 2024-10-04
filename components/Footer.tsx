@@ -45,12 +45,12 @@
                 />
                 </div>
                 <div className='flex flex-col gap-4 sm:flex-row'>
-                <p>Privacy Policy</p>
-                <p>Terms and Conditions</p>
+                <p className='text-base'>Privacy Policy</p>
+                <p className='text-base'>Terms and Conditions</p>
                 </div>
                 <div className='flex flex-col gap-4'>
-                <p>Copyright © 2024 Francis Oyeyiola</p>
-                <p>
+                <p className='text-base'>Copyright © 2024 Francis Oyeyiola</p>
+                <p className='text-base'>
                     Designed & developed by{' '}
                     <a href='https://kunalmenon.com'>Kunal Menon</a>
                 </p>

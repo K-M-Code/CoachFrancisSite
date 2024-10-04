@@ -1,9 +1,9 @@
 // components/HomeServices.tsx
 import Image from 'next/image'
-import MentorImage from '@/public/images/icons/mentor.svg'
-import CoachImage from '@/public/images/icons/coach.svg'
-import ConsultImage from '@/public/images/icons/consulting.svg'
-import SpeechImage from '@/public/images/icons/speech.svg'
+import MentorImage from '@/public/images/icons/HomeIcon4.png'
+import CoachImage from '@/public/images/icons/HomeIcon1.png'
+import ConsultImage from '@/public/images/icons/HomeIcon3.png'
+import SpeechImage from '@/public/images/icons/HomeIcon2.png'
 
 const HomeServices = () => {
     const servicesData = [
@@ -32,9 +32,9 @@ const HomeServices = () => {
             {servicesData.map((service, index) => (
                 <div
                 key={index}
-                className={`flex flex-col items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105 duration-300 rounded-xl p-4 z-{index} ${index % 2 == 1 ? 'sm:translate-y-10' : ''}`}
+                className={`flex flex-col max-w-[350px] max-h-[350px] min-w-[200px] min-h-[200px] items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105 duration-300 rounded-xl p-4 z-{index} ${index % 2 == 1 ? 'sm:translate-y-10' : ''}`}
                 >
-                <Image src={service.image} alt='' className='mb-6 h-28 w-28' />
+                <Image src={service.image} alt='' className='mb-6 h-32 w-32' />
                 <h4 className='text-center'>{service.title}</h4>
                 </div>
             ))}
