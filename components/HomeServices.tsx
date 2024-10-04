@@ -1,9 +1,9 @@
 // components/HomeServices.tsx
 import Image from 'next/image'
 import MentorImage from '@/public/images/icons/HomeIcon4.png'
-import CoachImage from '@/public/images/icons/HomeIcon1.png'
-import ConsultImage from '@/public/images/icons/HomeIcon3.png'
-import SpeechImage from '@/public/images/icons/HomeIcon2.png'
+import CoachImage from '@/public/images/icons/coach.svg'
+import ConsultImage from '@/public/images/icons/consulting.svg'
+import SpeechImage from '@/public/images/icons/speech.svg'
 
 const HomeServices = () => {
     const servicesData = [

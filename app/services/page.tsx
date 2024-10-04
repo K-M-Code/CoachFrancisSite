@@ -77,7 +77,7 @@
                 <ContactForm showTrigger={true}/>
             </div>
 
-            <div className='my-20 flex flex-col gap-12 lg:gap-20'>
+            <div className='mb-20 flex flex-col gap-12 lg:gap-20'>
 
             <ServicesList />
 

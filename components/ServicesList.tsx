@@ -75,7 +75,7 @@
             key={index}
             className={`flex flex-col border-b-8 border-primary py-10 lg:${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-10`}
             >
-            <div className='basis-1/3 justify-center'>
+            <div className='basis-1/3 justify-center self-center'>
                 <Image
                 src={service.image}
                 alt={service.alt}
