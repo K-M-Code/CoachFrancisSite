@@ -1,17 +1,17 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+    import Header from '@/components/Header'
+    import Footer from '@/components/Footer'
 
-const BlogPage = () => {
+    const BlogPage = () => {
     return (
         <>
-            <Header/>
-            
+        <Header />
+
         <div>
             <h1>Blog Page</h1>
         </div>
-            <Footer/>
+        <Footer />
         </>
     )
-}
+    }
 
-export default BlogPage
+    export default BlogPage
