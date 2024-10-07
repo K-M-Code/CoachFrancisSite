@@ -76,10 +76,10 @@
                 <h3 className='mb-4'>Contact Info</h3>
                 <div className='flex flex-col gap-4'>
                 <p>
-                    <a href='tel:+123 456 7890'>+123 456 7890</a>
+                    {/* <a href='tel:+123 456 7890'>+123 456 7890</a> */}
                 </p>
                 <p>
-                    <a href='mailto:coachoye@coachme2.fi'>coachoye@coachme2.fi</a>
+                    <a href='mailto:info@coachme2.fi'>info@coachme2.fi</a>
                 </p>
                 
                 <ContactForm showTrigger={true} />
