@@ -11,7 +11,7 @@ const Contact = () => {
 return (
     <div>
     <Header />
-    <div className="w-full h-56 bg-cover bg-center -mt-10" style={{ backgroundImage: `url(${ContactImage2.src})` }}>
+    <div className="w-full h-56 bg-cover bg-center -mt-4" style={{ backgroundImage: `url(${ContactImage2.src})` }}>
         <div className="container mx-auto mb-4">
         </div>
     </div>

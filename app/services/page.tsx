@@ -19,8 +19,7 @@
                 <Image
                     src={ServicePic1}
                     alt='Service 1 Image'
-                    objectFit='cover'
-                    className='h-full rounded-lg'
+                    className='h-full rounded-lg object-cover'
                 />
                 </div>
 
@@ -28,8 +27,7 @@
                 <Image
                     src={ServicePic2}
                     alt='Service 2 Image'
-                    objectFit='cover'
-                    className='h-full rounded-lg'
+                    className='h-full rounded-lg object-cover'
                 />
                 </div>
 
@@ -37,8 +35,7 @@
                 <Image
                     src={ServicePic3}
                     alt='Service 3 Image'
-                    objectFit='cover'
-                    className='h-full rounded-lg'
+                    className='h-full rounded-lg object-cover'
                 />
                 </div>
 
@@ -46,8 +43,7 @@
                 <Image
                     src={ServicePic4}
                     alt='Service 4 Image'
-                    objectFit='cover'
-                    className='h-full rounded-lg'
+                    className='h-full rounded-lg object-cover'
                 />
                 </div>
             </div>

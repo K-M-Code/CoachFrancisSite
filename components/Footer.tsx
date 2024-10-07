@@ -2,12 +2,10 @@
     import Link from 'next/link' // Import the Link component
     import LogoImage from '@/public/images/logo.svg'
     import YouTubeIcon from '@/public/images/icons/youtube.svg'
-    // import TwitterIcon from '@/public/images/icons/twitter.svg'
     import LinkedinIcon from '@/public/images/icons/linkedin.svg'
     import InstagramIcon from '@/public/images/icons/instagram.svg'
-
-    // import { Button } from '@/components/ui/button'
     import ContactForm from '@/components/ContactForm'
+    import siteLinks from '@/components/siteLinks'
 
     interface SocialLink {
     icon: string
@@ -16,17 +14,10 @@
     }
 
     const Footer = () => {
-    const siteLinks = [
-        { href: '/', label: 'Home' },
-        { href: '/about', label: 'About Me' },
-        { href: '/services', label: 'Services' },
-        // { href: '/blog', label: 'Blog' },
-        { href: '/contact', label: 'Contact Me' }
-    ]
+
 
     const socialLinks: SocialLink[] = [
         { icon: YouTubeIcon, alt: 'Coach Oye Youtube', href: 'https://www.youtube.com/@CoachOye' },
-        // { icon: TwitterIcon, alt: 'Coach Oye Twitter', href: '#' },
         { icon: LinkedinIcon, alt: 'Coach Oye LinkedIn', href: 'https://www.linkedin.com/in/francisoyeyiola/' },
         { icon: InstagramIcon, alt: 'Coach Oye Instagram', href: 'https://www.instagram.com/coachoye_productions/' },
     ]
@@ -57,7 +48,7 @@
                 </div>
                 <div className='flex flex-row gap-6'>
                 {socialLinks.map(link => (
-                    <Link href={link.href} key={link.alt} legacyBehavior>
+                    <Link href={link.href} key={link.alt} target='_blank'>
                     <span className='group cursor-pointer'>
                         <Image
                         src={link.icon}
@@ -75,8 +66,7 @@
                 <h3 className='mb-4'>Quick Links</h3>
                 <div className='flex flex-col gap-4'>
                 {siteLinks.map((link, index) => (
-                    <Link href={link.href} key={index} target="_blank">
-                    
+                    <Link href={link.href} key={index}>
                     <p>{link.label}</p>
                     </Link>
                 ))}

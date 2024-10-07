@@ -14,9 +14,8 @@ const HomeHero = () => {
       <Image
         src={HeroImage}
         alt=""
-        layout="fill"
-        objectFit="cover"
-        style={{ marginLeft: "auto" }}
+        fill={true}
+        className='object-cover ml-auto'
       />
         <div className="absolute top-1/2 left-2 right-2 sm:left-10 sm:right-10 lg:left-20 -translate-y-1/4 flex flex-col gap-4 lg:gap-10">
           {heroBannerContent.map((text, index) => (
