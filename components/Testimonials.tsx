@@ -53,7 +53,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="testimonials bg-primary py-20 text-white">
+    <section id='testimonials' className="bg-primary py-20 text-white">
       <div className="container mx-auto">
       <h2 className="mb-12 text-center">
         What people say about my services?
@@ -62,7 +62,7 @@ const Testimonials = () => {
       <div
         className="relative flex overflow-hidden"
       >
-        <div className="flex items-center justify-start space-x-8 animate-infinite-scroll">
+        <div className="flex max-w-[100svw] items-center justify-start gap-8 animate-infinite-scroll">
           {testimonialsData.map((testimonial, index) => (
             <div
               key={index}

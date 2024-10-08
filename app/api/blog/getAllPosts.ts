@@ -1,28 +1,21 @@
-// import GhostContentAPI from '@tryghost/content-api';
-// import { NextRequest, NextResponse } from 'next/server';
+import GhostContentAPI from '@tryghost/content-api';
+import { NextResponse } from 'next/server';
 
-// export async function GET(request: NextRequest) {
-//     const { searchParams } = new URL(request.url);
-//     const tag = searchParams.get('tag');
-//     const page = searchParams.get('page');
-//     const limit = searchParams.get('limit');
-//     const api = new GhostContentAPI({
-//         url: process.env.NEXT_PUBLIC_GHOST_URL,
-//         key: process.env.NEXT_PUBLIC_GHOST_KEY,
-//         version: 'v4',
-//     });
+export async function GET() {
+  const api = new GhostContentAPI({
+    url: process.env.NEXT_PUBLIC_GHOST_URL || '',
+    key: process.env.GHOST_CONTENT_API_KEY || '',
+    version: 'v5.0',
+  });
 
-//     const posts = await api.posts
-//         .browse({
-//             limit: limit ? Number(limit) : undefined,
-//             include: 'tags',
-//             page: page ? Number(page) : undefined,
-//             tags: tag ? [tag] : undefined,
-//         })
-//         .catch((error) => {
-//             console.error(error);
-//             return [];
-//         });
+  try {
+    const posts = await api.posts.browse({
+      limit: 'all',
+      include: ['tags', 'authors'],
+    });
+    return NextResponse.json(posts);
+  } catch (error: unknown) {
+    return NextResponse.json({ error: String(error) });
+  }
+}
 
-//     return NextResponse.json(posts);
-// }

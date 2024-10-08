@@ -34,7 +34,8 @@ function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
 
 const Header = () => {
   return (
-    <header className='w-full bg-white z-50 sticky top-0 shadow-md'>
+  <>
+      <header className='w-full bg-white z-50 sticky top-0 shadow-md'>
       <div className='container mx-auto'>
         <div className='flex items-center justify-between px-4 py-2'>
           <Link href='/' className='flex items-center gap-2' prefetch={false}>
@@ -83,6 +84,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   )
 }
 

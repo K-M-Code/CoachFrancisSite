@@ -1,13 +1,10 @@
-import Header from "@/components/Header";
 import Image from "next/image";
-import Footer from "@/components/Footer";
 import AboutPic from '@/public/images/about2.jpg';
 import ContactForm from "@/components/ContactForm";
 
 const About = () => {
     return (
-        <section className="about-page">
-            <Header/>
+        <section id="aboutMe" className="">
             <div className="container mx-auto my-20 px-4">
                 <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
                     <div className="about-image lg:basis-1/2 ">
@@ -49,7 +46,6 @@ const About = () => {
             <div className="container mx-auto flex justify-center">
                 <ContactForm showTrigger={true}/>
             </div>
-            <Footer/>
         </section>
     )
 }

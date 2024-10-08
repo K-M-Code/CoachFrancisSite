@@ -1,6 +1,4 @@
-    import Header from '@/components/Header'
     import Image from 'next/image'
-    import Footer from '@/components/Footer'
     import ServicePic1 from '@/public/images/services/Services2.jpg'
     import ServicePic2 from '@/public/images/services/Services3.jpg'
     import ServicePic3 from '@/public/images/services/Services7.jpg'
@@ -10,8 +8,7 @@
 
     const Services = () => {
     return (
-        <section className='services-page'>
-        <Header />
+        <section id='servicesPage' className=''>
         <div className='container mx-auto p-8'>
             <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
             <div className='grid h-fit min-h-[450px] grid-cols-2 gap-4 sm:min-h-[750px]'>
@@ -85,7 +82,6 @@
                 <ContactForm showTrigger={true}/>
             </div>
         </div>
-        <Footer />
         </section>
     )
     }
