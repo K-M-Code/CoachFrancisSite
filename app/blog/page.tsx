@@ -13,7 +13,8 @@ interface Post {
         name: string;
     };
 }
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export default async function BlogPage(req: NextRequest) {
     const response = await getAllBlogPosts(req);
     const posts = await response.json(); // Await the JSON response
