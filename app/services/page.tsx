@@ -1,8 +1,8 @@
     import Image from 'next/image'
-    import ServicePic1 from '@/public/images/services/Services2.jpg'
-    import ServicePic2 from '@/public/images/services/Services3.jpg'
-    import ServicePic3 from '@/public/images/services/Services7.jpg'
-    import ServicePic4 from '@/public/images/services/Services8.jpg'
+    import ServicePic1 from '@/public/images/services/coaching1.jpg'
+    import ServicePic2 from '@/public/images/services/mentoring1.jpg'
+    import ServicePic3 from '@/public/images/services/consulting1.jpg'
+    import ServicePic4 from '@/public/images/services/publicspeaking2.jpg'
     import ServicesList from '@/components/ServicesList'
     import ContactForm from '@/components/ContactForm'
 
