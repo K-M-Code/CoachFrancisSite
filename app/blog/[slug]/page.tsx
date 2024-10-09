@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { getBlogPost } from '@/app/api/blog/getBlogPost';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-// import BlogRecommendations from '@/components/BlogRecommendations';
+import BlogRecommendations from '@/components/BlogRecommendations';
 
 interface Post {
     id: string;
@@ -57,7 +57,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
         return (
             <>
-            <section id='postPage' className='-mt-4 bg-yellow-400/50'>
+            <section id='postPage' className='-mt-4 bg-blue-400/25'>
                 <div className="container mx-auto py-12">
                     
                 <div className='m-4 p-8 md:p-12 lg:p-16 xl:p-20 rounded-lg shadow-lg bg-white'>
@@ -84,7 +84,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                 </div>
                 </div>
             </section>
-            {/* <BlogRecommendations /> */}
+            <BlogRecommendations />
             </>
         );
     } catch (error) {
