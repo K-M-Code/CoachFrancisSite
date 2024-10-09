@@ -67,7 +67,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
                     )}
 
                     {post.feature_image && (
-                        <div className="relative w-full h-72 mb-8">
+                        <div className="relative w-full h-96 mb-8">
                             <Image
                                 src={post.feature_image}
                                 alt={post.title}
