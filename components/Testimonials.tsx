@@ -10,8 +10,14 @@ const Testimonials = () => {
   const testimonialsData = [
     {
       quote:
-        "I highly recommend working with Francis! He's knowledgeable, supportive, and helped me navigate my move to Finland with ease.",
-      name: 'John Doe',
+        "Friendly, open and experienced person that I can access whenever and talk what I want openly. What I appreciate mostly is Francis has connected/recommended his people and my need to restaurant business. With our openly discussion, we manage well to make his recommendation Yen to be one of our most wanted workers. With his recommendation, I have printed out our current business card based on Francis’s team. With the openly conversation with Francis, I can feel he understands very well about business in real life and theory. Never enough to talk more with Francis. To make it short, good personality and rich knowledge about humanity",
+      name: 'Lin',
+      position: 'Software Engineer',
+      photo: Male1.src,
+    },{
+      quote:
+        "Friendly, open and experienced person that I can access whenever and talk what I want openly. What I appreciate mostly is Francis has connected/recommended his people and my need to restaurant business. With our openly discussion, we manage well to make his recommendation Yen to be one of our most wanted workers. ",
+      name: 'Lin',
       position: 'Software Engineer',
       photo: Male1.src,
     },
@@ -19,7 +25,7 @@ const Testimonials = () => {
       quote:
         'Francis is an excellent coach and mentor. His guidance and expertise helped me secure a job in Finland and start a new chapter in my life.',
       name: 'Jane Smith',
-      position: 'Marketing Specialist',
+      position: 'Thum Yun Thai',
       photo: Female1.src,
     },
     {

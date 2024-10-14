@@ -57,7 +57,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
         return (
             <>
-            <section id='postPage' className='-mt-4 bg-blue-400/25'>
+            <section id='postPage' className='-mt-4'>
                 <div className="container mx-auto py-12">
                     
                 <div className='m-4 p-8 md:p-12 lg:p-16 xl:p-20 rounded-lg shadow-lg bg-white'>

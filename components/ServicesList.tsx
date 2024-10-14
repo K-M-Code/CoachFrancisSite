@@ -89,14 +89,7 @@
                 {' '}
                 <ul className='list-inside list-disc'>
                     {service.listItems
-                    .slice(0, Math.ceil(service.listItems.length / 2))
-                    .map((item, i) => (
-                        <li key={i}>{item}</li>
-                    ))}
-                </ul>
-                <ul className='list-inside list-disc'>
-                    {service.listItems
-                    .slice(Math.ceil(service.listItems.length / 2))
+                    .slice(0, Math.ceil(service.listItems.length))
                     .map((item, i) => (
                         <li key={i}>{item}</li>
                     ))}
