@@ -62,12 +62,12 @@ theme: {
 		sm: 'calc(var(--radius) - 4px)'
 	},
 	animation: {
-		'infinite-scroll': 'infinite-scroll 45s  linear infinite'
+		'infinite-scroll': 'infinite-scroll 75s  linear infinite'
 	},
 	keyframes: {
 		'infinite-scroll': {
 		from: { transform: 'translateX(0)' },
-		to: { transform: 'translateX(-50%)' }
+		to: { transform: 'translateX(-250%)' }
 		}
 	}
 	}
