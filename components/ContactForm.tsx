@@ -46,16 +46,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ trigger, showTrigger = true }
           setOpen(false);
         }
       } else {
+        const errorData = await response.json(); // Get error details from the server
         toast({
           title: 'Error',
-          description: 'There was an error sending your message, Please try again.',
+          description: errorData.error || 'There was an error sending your message. Please try again.', // Display server error
           variant: 'destructive',
         });
       }
     } catch (error) {
+      console.error("Client-side error:", error); // Log client-side errors for debugging
       toast({
         title: 'Error',
-        description: 'There was an error sending your message.',
+        description: 'There was a problem submitting your message. Please check your connection.',
         variant: 'destructive',
       });
     }

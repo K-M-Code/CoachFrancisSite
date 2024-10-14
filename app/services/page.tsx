@@ -1,17 +1,14 @@
-    import Header from '@/components/Header'
     import Image from 'next/image'
-    import Footer from '@/components/Footer'
-    import ServicePic1 from '@/public/images/services/Services2.jpg'
-    import ServicePic2 from '@/public/images/services/Services3.jpg'
-    import ServicePic3 from '@/public/images/services/Services7.jpg'
-    import ServicePic4 from '@/public/images/services/Services8.jpg'
+    import ServicePic1 from '@/public/images/services/coaching1.jpg'
+    import ServicePic2 from '@/public/images/services/mentoring1.jpg'
+    import ServicePic3 from '@/public/images/services/consulting1.jpg'
+    import ServicePic4 from '@/public/images/services/publicspeaking2.jpg'
     import ServicesList from '@/components/ServicesList'
     import ContactForm from '@/components/ContactForm'
 
     const Services = () => {
     return (
-        <section className='services-page'>
-        <Header />
+        <section id='servicesPage' className=''>
         <div className='container mx-auto p-8'>
             <div className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
             <div className='grid h-fit min-h-[450px] grid-cols-2 gap-4 sm:min-h-[750px]'>
@@ -85,7 +82,6 @@
                 <ContactForm showTrigger={true}/>
             </div>
         </div>
-        <Footer />
         </section>
     )
     }

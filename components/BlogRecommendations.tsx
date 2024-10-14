@@ -39,7 +39,7 @@ const articles: BlogArticle[] = [
 
 const BlogRecommendations = () => {
 return (
-    <div className='container mx-auto my-10 px-4'>
+    <section id='blogRecommendation' className='container mx-auto my-10 px-4'>
     <div className='mb-6 flex items-center justify-between'>
         <h2 className='text-3xl font-bold'>Blog Articles</h2>
         <a
@@ -84,7 +84,7 @@ return (
         </div>
         ))}
     </div>
-    </div>
+    </section>
 )
 }
 

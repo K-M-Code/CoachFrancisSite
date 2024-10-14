@@ -3,10 +3,10 @@ import BlogRecommendations from '@/components/BlogRecommendations';
 
 const HomeBlog = () => {
     return (
-        <div>
+        <section id='blog' className=''>
             <BlogHighlight/>
             <BlogRecommendations/>
-        </div>
+        </section>
     )
 }
 

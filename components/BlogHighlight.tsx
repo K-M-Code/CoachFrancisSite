@@ -3,7 +3,7 @@ import ArticleHighlight from '@/public/images/article1.jpg'
 
 const BlogHighlight = () => {
     return (
-        <section className='BlogHighlight'>
+        <section id='blogHighlight'>
         <div className="container mx-auto my-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4 md:px-10">
                 <div className=''>

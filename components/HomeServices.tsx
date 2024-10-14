@@ -13,8 +13,7 @@ const HomeServices = () => {
     { image: SpeechImage, title: 'Public Speaking' }
     ]
     return (
-    <div>
-        <section className='services py-24'>
+        <section id='services' className='py-24'>
         <div className='container mx-auto grid grid-cols-1 gap-12 px-8 lg:px-20 2xl:px-0 lg:grid-cols-2'>
             <div>
             <div className="absolute -left-8 sm:-left-52 bg-primary p-10 w-4/5 h-3/5 sm:h-1/5 lg:w-2/4 lg:h-3/5 xl:h-2/5 -z-50 rounded-3xl opacity-10"></div>
@@ -42,7 +41,6 @@ const HomeServices = () => {
             
         </div>
         </section>
-    </div>
     )
 }
 export default HomeServices

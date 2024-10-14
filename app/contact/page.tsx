@@ -1,7 +1,5 @@
 'use client'
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import ContactForm from '@/components/ContactForm'
 import Image from 'next/image'
 import ContactImage1 from '@/public/images/logo.svg'
@@ -9,8 +7,7 @@ import ContactImage2 from '@/public/images/services/Services6.jpg'
 
 const Contact = () => {
 return (
-    <div>
-    <Header />
+    <section id='contactPage'>
     <div className="w-full h-56 bg-cover bg-center -mt-4" style={{ backgroundImage: `url(${ContactImage2.src})` }}>
         <div className="container mx-auto mb-4">
         </div>
@@ -35,8 +32,7 @@ return (
             </div>
         </div>
     </div>
-    <Footer />
-    </div>
+    </section>
 )
 }
 

@@ -1,8 +1,8 @@
     import Image from 'next/image'
-    import ServicePic1 from '@/public/images/services/Services2.jpg'
-    import ServicePic2 from '@/public/images/services/Services3.jpg'
-    import ServicePic3 from '@/public/images/services/Services7.jpg'
-    import ServicePic4 from '@/public/images/services/Services8.jpg'
+    import ServicePic1 from '@/public/images/services/coaching1.jpg'
+    import ServicePic2 from '@/public/images/services/mentoring1.jpg'
+    import ServicePic3 from '@/public/images/services/consulting1.jpg'
+    import ServicePic4 from '@/public/images/services/publicspeaking2.jpg'
     // import ContactForm from '@/components/ContactForm'
 
     const servicesContent = [
@@ -73,7 +73,7 @@
         {servicesContent.map((service, index) => (
             <div
             key={index}
-            className={`flex flex-col border-b-8 border-primary py-10 lg:${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-10`}
+            className={`flex flex-col border-b-8 border-primary py-10 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10`}
             >
             <div className='basis-1/3 justify-center self-center'>
                 <Image
@@ -89,14 +89,7 @@
                 {' '}
                 <ul className='list-inside list-disc'>
                     {service.listItems
-                    .slice(0, Math.ceil(service.listItems.length / 2))
-                    .map((item, i) => (
-                        <li key={i}>{item}</li>
-                    ))}
-                </ul>
-                <ul className='list-inside list-disc'>
-                    {service.listItems
-                    .slice(Math.ceil(service.listItems.length / 2))
+                    .slice(0, Math.ceil(service.listItems.length))
                     .map((item, i) => (
                         <li key={i}>{item}</li>
                     ))}

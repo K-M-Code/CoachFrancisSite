@@ -122,6 +122,16 @@ label {
     font: var(--label);
 }
 
+/* Fix the iframe sizing */
+
+iframe {
+  min-width: 100%;
+  min-height: 400px;
+  aspect-ratio: 16/9;
+  max-width: 1280px;
+  max-height: 720px;
+}
+
 @layer base {
   :root { 
     --background: 0 0% 100%; 
