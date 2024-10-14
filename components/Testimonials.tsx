@@ -17,8 +17,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import useEmblaCarousel from 'embla-carousel-react';
-import AutoPlay from 'embla-carousel-autoplay';
+// import useEmblaCarousel from 'embla-carousel-react';
+// import AutoPlay from 'embla-carousel-autoplay';
 
 const Testimonials = () => {
   const testimonialsData = [
