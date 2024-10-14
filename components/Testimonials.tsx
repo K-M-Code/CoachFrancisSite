@@ -9,6 +9,16 @@ import Uche from '@/public/images/testimonials/Uchechukwu Unachukwu.jpg';
 import Rhoda from '@/public/images/testimonials/Rhoda.jpg';
 import MaleIcon from '@/public/images/icons/male1.svg'
 // import FemaleIcon from '@/public/images/icons/female1.svg'
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import useEmblaCarousel from 'embla-carousel-react';
+import AutoPlay from 'embla-carousel-autoplay';
 
 const Testimonials = () => {
   const testimonialsData = [
@@ -90,6 +100,8 @@ const Testimonials = () => {
     },
   ];
 
+  
+
   return (
     <section id='testimonials' className="bg-primary py-20 text-white">
       <div className="container mx-auto">
@@ -97,35 +109,45 @@ const Testimonials = () => {
         What people say about my services?
       </h2>
 
-      <div
-        className="relative flex overflow-hidden"
+      <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-3xl xl:max-w-6xl mx-auto"
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        // plugins={[
+        //   AutoPlay({
+        //     delay: 2000,
+        //   }),
+        // ]}
+  
       >
-        <div className="flex max-w-[100svw] items-center justify-start gap-8 animate-infinite-scroll">
-          {testimonialsData.map((testimonial, index) => (
-            <div
-              key={index}
-              className="min-w-[75vw] sm:min-w-[45vw] lg:min-w-[30vw] flex-col gap-10 lg:flex-row bg-white text-black p-8 shadow-xl my-10 hover:shadow-2xl transform hover:scale-105 duration-300 rounded-xl"
-            >
-              <div className="flex flex-col gap-4">
-                <p className="line-clamp-6">{testimonial.quote}</p>
-                <div className="flex gap-6">
-                  <Image
-                    src={testimonial.photo}
-                    alt={testimonial.name}
-                    width={100}
-                    height={100}                    
-                    className="rounded-full"
-                  />
-                  <div className="flex flex-col gap-2">
-                    <h3 className="">{testimonial.name}</h3>
-                    <p className="">{testimonial.position}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+          <CarouselContent>
+            {testimonialsData.map((testimonial, index) => (
+              <CarouselItem key={index} className='lg:basis-1/2'>
+                <Card className="bg-white text-black">
+                  <CardContent className="flex flex-col gap-4 p-6">
+                    <p className="lg:line-clamp-6">{testimonial.quote}</p>
+                    <div className="flex items-center gap-4">
+                      <Image
+                        src={testimonial.photo}
+                        alt={testimonial.name}
+                        width={50}
+                        height={50}
+                        className="rounded-full"
+                      />
+                      <div>
+                        <h3 className="font-semibold">{testimonial.name}</h3>
+                        <p className="text-sm text-gray-600">{testimonial.position}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
