@@ -1,14 +1,14 @@
+"use client"
 import Image from 'next/image';
 import Lin from '@/public/images/testimonials/Lin ThumYunThai.jpg';
 import Joona from '@/public/images/testimonials/Joona.jpg';
 import Rashida from '@/public/images/testimonials/Rashida Mohammed.jpg';
 import Charles from '@/public/images/testimonials/Charles.jpg';
-import Anjan from '@/public/images/testimonials/Anjan Bayalkoti.jpg'
+import Anjan from '@/public/images/testimonials/Anjan Bayalkoti.jpg';
 import Cathy from '@/public/images/testimonials/Cathy Leonelle.jpg';
 import Uche from '@/public/images/testimonials/Uchechukwu Unachukwu.jpg';
 import Rhoda from '@/public/images/testimonials/Rhoda.jpg';
-import MaleIcon from '@/public/images/icons/male1.svg'
-// import FemaleIcon from '@/public/images/icons/female1.svg'
+import MaleIcon from '@/public/images/icons/male1.svg';
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -17,8 +17,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-// import useEmblaCarousel from 'embla-carousel-react';
-// import AutoPlay from 'embla-carousel-autoplay';
+import useEmblaCarousel from 'embla-carousel-react';
+import AutoPlay from 'embla-carousel-autoplay';
+import {  useEffect, useCallback } from "react";
 
 const Testimonials = () => {
   const testimonialsData = [
@@ -28,11 +29,12 @@ const Testimonials = () => {
       name: 'Lin',
       position: 'Tom Yum Thai',
       photo: Lin.src,
-    },{
+    },
+    {
       quote:
         "I have received professional advice from Francis on how to improve my CV. He helped me understand what to highlight and how to present my skills in a way that stands out to employers. I can warmly recommend Francis for anyone looking for support with job applications, CV writing, or career advice.",
       name: 'Joona',
-      position: '',
+      position: 'University of Vaasa',
       photo: Joona.src,
     },
     {
@@ -46,7 +48,7 @@ const Testimonials = () => {
       quote:
         "All the way from Nigeria , I want to appreciate and thank  you my coach and mentor Mr Oye, for your great support in mentoring me on how to achieve my goal in line with my desired profession of which have been struggling with , but when I came in contact with you , i have  learned so much  from you  and now am getting it right thank you boss. 👍🏽",
       name: 'Charles',
-      position: '',
+      position: 'Nigeria',
       photo: Charles.src,
     },
     {
@@ -74,7 +76,7 @@ const Testimonials = () => {
       quote:
         "Francis gave me room to express my needs and gave me a good listening ear. I learnt key things about career development and a new perspective of viewing my career from him. Regular self-evaluation about my work, self-awareness and actively listening to those experienced in my field are things I have learnt to pay attention to from this session. Looking forward to booking other sessions for other aspects.",
       name: 'Rhoda',
-      position: 'Nursing Student',
+      position: 'Savonia',
       photo: Rhoda.src,
     },
     {
@@ -100,33 +102,50 @@ const Testimonials = () => {
     },
   ];
 
-  
+  const [emblaRef, embla] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+    skipSnaps: false,
+    inViewThreshold: 0.7,
+  });
+
+  // Removed unused scrollTo
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+  }, [embla]);
+
+  useEffect(() => {
+    if (!embla) return;
+    onSelect();
+    embla.on("select", onSelect);
+  }, [embla, onSelect]);
 
   return (
-    <section id='testimonials' className="bg-primary py-20 text-white">
+    <section id="testimonials" className="bg-primary py-20 text-white">
       <div className="container mx-auto">
-      <h2 className="mb-12 text-center">
-        What people say about my services?
-      </h2>
+        <h2 className="mb-12 text-center">What people say about my services?</h2>
 
-      <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-3xl xl:max-w-6xl mx-auto"
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        // plugins={[
-        //   AutoPlay({
-        //     delay: 2000,
-        //   }),
-        // ]}
-  
-      >
-          <CarouselContent>
+        <Carousel
+          ref={emblaRef}
+          className="mx-auto flex size-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-3xl xl:max-w-6xl"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            AutoPlay({
+              delay: 2500,
+            }),
+          ]}
+        >
+          <CarouselContent className="h-full">
             {testimonialsData.map((testimonial, index) => (
-              <CarouselItem key={index} className='lg:basis-1/2'>
+              <CarouselItem key={index} className="h-full lg:basis-1/2">
                 <Card className="bg-white text-black">
                   <CardContent className="flex flex-col gap-4 p-6">
-                    <p className="lg:line-clamp-6">{testimonial.quote}</p>
+                    <p className="line-clamp-[11] sm:line-clamp-[9] lg:line-clamp-6">
+                      {testimonial.quote}
+                    </p>
                     <div className="flex items-center gap-4">
                       <Image
                         src={testimonial.photo}
@@ -137,7 +156,9 @@ const Testimonials = () => {
                       />
                       <div>
                         <h3 className="font-semibold">{testimonial.name}</h3>
-                        <p className="text-sm text-gray-600">{testimonial.position}</p>
+                        <p className="text-sm text-gray-600">
+                          {testimonial.position}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
