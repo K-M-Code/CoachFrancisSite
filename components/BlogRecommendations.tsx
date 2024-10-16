@@ -64,7 +64,7 @@ return (
                 {article.category}
             </p>
                 <Link
-                href={`/blog/${article.link}`}
+                href={`${article.link}`}
                 className='group/read-more inline-flex items-center rounded-full bg-primary px-4 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-black hover:shadow-lg'
                 >
                 Read More
