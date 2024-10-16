@@ -1,53 +1,44 @@
-// app/components/BlogRecommendations.tsx
 import Image from 'next/image'
-import Article2 from '@/public/images/article2.jpg'
-import Article3 from '@/public/images/article3.jpg'
-import Article4 from '@/public/images/article4.jpg'
 import { StaticImageData } from 'next/image'
+import { getPostsByTag } from '@/app/api/blog/getPostsByTag'
+import type { Post } from '@/app/api/blog/types';
+
 
 type BlogArticle = {
     title: string
     category: string
-    imageSrc: StaticImageData
+    imageSrc: StaticImageData | string
     description: string
     link: string
 }
 
-const articles: BlogArticle[] = [
-    {
-    title: 'Life in Finland',
-    category: 'LIFE',
-    imageSrc: Article2,
-    description: 'Read More',
-    link: '#'
-    },
-    {
-    title: 'Jobs in Finland',
-    category: 'WORK',
-    imageSrc: Article3,
-    description: 'Read More',
-    link: '#'
-    },
-    {
-    title: 'Healthcare in Finland',
-    category: 'HEALTH',
-    imageSrc: Article4,
-    description: 'Read More',
-    link: '#'
-    }
-]
 
-const BlogRecommendations = () => {
+
+export default async function  BlogRecommendations () {
+
+
+const responseRecommendation = await getPostsByTag('recommendation');
+const postsRecommendation: Post[] = await responseRecommendation.json();
+// console.log('postsRecommendation:', postsRecommendation);
+
+const articles: BlogArticle[] = postsRecommendation.map((post) => ({
+    title: post.title,
+    category: post.tags[0]?.name || 'Unknown',
+    imageSrc: post.feature_image || '/public/images/article1.jpg',
+    description: 'Read More',
+    link: `/blog/${post.slug}`
+}))
+
 return (
     <section id='blogRecommendation' className='container mx-auto my-10 px-4'>
     <div className='mb-6 flex items-center justify-between'>
         <h2 className='text-3xl font-bold'>Blog Articles</h2>
         <a
-        href='#'
-        className='group rounded-lg bg-primary px-6 py-4 text-white transition-all duration-300 hover:bg-secondary hover:text-black hover:scale-105'
+        href='/blog'
+        className='group rounded-lg bg-primary px-6 py-4 text-white transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-black'
         >
         View More Articles
-        <span className='ml-2 text-secondary transition-all duration-300 group-hover:text-black hover:scale-105'>
+        <span className='ml-2 text-secondary transition-all duration-300 hover:scale-105 group-hover:text-black'>
             ↗
         </span>
         </a>
@@ -67,13 +58,13 @@ return (
             className='h-48 w-full object-cover'
             />
             <div className='p-4'>
-            <h3 className=''>{article.title}</h3>
-            <p className='mb-2 uppercase text-yellow-500'>
+            <h4 className='h-16'>{article.title}</h4>
+            <p className='my-2 uppercase text-secondary'>
                 {article.category}
             </p>
             <a
                 href={article.link}
-                className='group mt-4 inline-block rounded-lg bg-primary m-4 px-6 py-4 text-white transition-all duration-300 hover:bg-secondary hover:text-black hover:scale-105'
+                className='group my-4 inline-block rounded-lg bg-primary px-6 py-4 text-white transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-black'
             >
                 {article.description}
                 <span className='ml-2 text-xl text-secondary transition-all duration-300 group-hover:text-black'>
@@ -87,5 +78,3 @@ return (
     </section>
 )
 }
-
-export default BlogRecommendations
