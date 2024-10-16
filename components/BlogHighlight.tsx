@@ -20,7 +20,7 @@ export default async function BlogHighlight() {
                                 <Image src="@/public/images/article1.jpg" alt="Placeholder" className='' quality={100} width={500} height={500} />
                             )}
                         </div>
-                        <div className="gap-810 flex flex-col">
+                        <div className="flex flex-col gap-8">
                             <div className="flex">
                                 <div className="flex items-center justify-center">
                                     <span className="mr-4 w-12 border-t-4 border-secondary"></span>
