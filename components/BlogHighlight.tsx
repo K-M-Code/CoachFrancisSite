@@ -50,3 +50,6 @@ export default async function BlogHighlight() {
         </section>
     )
 }
+
+
+export const revalidate = 0;

@@ -78,3 +78,5 @@ return (
     </section>
 )
 }
+
+export const revalidate = 0;
