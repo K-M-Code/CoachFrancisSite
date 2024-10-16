@@ -1,31 +1,73 @@
-import Image from 'next/image';
-import ArticleHighlight from '@/public/images/article1.jpg'
+    import Image from 'next/image'
+    import { getPostsByTag } from '@/app/api/blog/getAllBlogPosts'
+    import type { Post } from '@/app/api/blog/types'
+    import Link from 'next/link'
+    export default async function BlogHighlight() {
+    const responseHighlight = await getPostsByTag('highlight')
+    const postsHighlight: Post[] = await responseHighlight.json()
 
-const BlogHighlight = () => {
     return (
         <section id='blogHighlight'>
-        <div className="container mx-auto my-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4 md:px-10">
+        <div className='container mx-auto my-24 px-4'>
+            {postsHighlight.map((post: Post, index: number) => (
+            <div
+                key={index}
+                className='grid grid-cols-1 items-center gap-10 px-4 md:px-10 lg:grid-cols-2'
+            >
                 <div className=''>
-                    <Image src={ArticleHighlight} alt="Highlight Image" className='' quality={100}/> 
+                {post.feature_image ? (
+                    <Image
+                    src={post.feature_image}
+                    alt={post.title}
+                    className=''
+                    quality={100}
+                    width={1000}
+                    height={1000}
+                    />
+                ) : (
+                    <Image
+                    src='@/public/images/article1.jpg'
+                    alt='Placeholder'
+                    className=''
+                    quality={100}
+                    width={500}
+                    height={500}
+                    />
+                )}
                 </div>
-                <div className="flex flex-col">
-                    <div className="flex">
-                        <div className="flex justify-center items-center">
-                            <span className="border-t-4 border-secondary w-12 mr-4"></span>
-                            <h4 className='uppercase text-secondary'>life</h4>
-                        </div>
+                <div className='flex flex-col gap-4'>
+                <div className='flex'>
+                    <div className='flex items-center justify-center'>
+                    <span className='mr-4 w-12 border-t-4 border-secondary'></span>
+                    <h4 className='uppercase text-secondary'>
+                        {post.primary_tag ? post.primary_tag.name : 'Untitled'}
+                    </h4>
                     </div>
-                    <h2 className='border-b-4 border-secondary w-fit'>Highlight Blog Title</h2> 
-                    <p className='my-4'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorem error, architecto, officia id quod incidunt facilis sed provident est dicta! Ab, quas assumenda saepe eos repudiandae porro unde animi.
-                        Deleniti veritatis, veniam qui eaque suscipit repellendus in velit eveniet possimus? Id quidem aliquam commodi magnam tempora similique tenetur obcaecati ipsum eius repellat accusamus, explicabo omnis consequatur corrupti optio reprehenderit.
-                    </p>
+                </div>
+                <h2 className='w-fit border-b-4 border-secondary pb-4 leading-normal'>
+                    {post.title}
+                </h2>
+                <div
+                    className='prose line-clamp-6'
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                />
+                <div className=''>
+                    <Link
+                    href={`/blog/${post.slug}`}
+                    className='group my-4 inline-block rounded-lg bg-primary p-4 text-white transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-black hover:shadow-lg'
+                    >
+                    Read More
+                    <span className='ml-2 text-xl text-secondary transition-all duration-300 group-hover:text-black'>
+                        ↗
+                    </span>
+                    </Link>
+                </div>
                 </div>
             </div>
+            ))}
         </div>
         </section>
     )
-}
+    }
 
-export default BlogHighlight;
+    export const revalidate = 0
