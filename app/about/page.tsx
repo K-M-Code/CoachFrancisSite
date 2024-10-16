@@ -1,16 +1,55 @@
 import Image from "next/image";
 import AboutPic from '@/public/images/about2.jpg';
 import ContactForm from "@/components/ContactForm";
+import Abo from '@/public/images/education/aboakademi.jpeg'
+import TAMK from '@/public/images/education/tamk.jpeg'
+import UniVaasa from '@/public/images/education/univaasa.jpeg'
+import Hanken from '@/public/images/education/hanken.jpeg'
+import VAMK from '@/public/images/education/vamk.jpeg'
+
+const educationContent = [
+    {
+        image: Abo.src,
+        alt: 'Abokademi Logo',
+        title: 'Åbo Akademi, Vaasa',
+        description: 'M.A. in Education'
+    },
+    {
+        image: VAMK.src,
+        alt: 'VAMK Logo',
+        title: 'VAMK, Vaasa',
+        description: 'Bachelor of Engineering in IT '
+    },
+    {
+        image: TAMK.src,
+        alt: 'TAMK Logo',
+        title: 'TAMK, Tampere',
+        description: 'Professional Teacher Education (AmO)'
+    },
+    {
+        image: Hanken.src,
+        alt: 'Hanken School of Business Logo',
+        title: 'Hanken School of Business, Vaasa',
+        description: 'Middle Management in Business Administration'
+    },
+    {
+        image: UniVaasa.src,
+        alt: 'Vaasa University Logo',
+        title: 'Vaasa University, Vaasa',
+        description: 'MSc. in Economics & Business Admin. (Industrial Management)'
+    }
+]
+
 
 const About = () => {
     return (
         <section id="aboutMe" className="">
             <div className="container mx-auto my-20 px-4">
-                <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
-                    <div className="about-image lg:basis-1/2 ">
+                <div className="flex flex-col items-center justify-center gap-10 lg:flex-row">
+                    <div id="about-image" className="lg:basis-1/2 ">
                         <Image src={AboutPic} alt="About Image" width={600} height={400} className="rounded-2xl"/>
                     </div>
-                    <div className="about-content lg:basis-1/2">
+                    <div id="about-content" className="lg:basis-1/2">
                         <h1>About Me</h1>
                         <p className="py-4">
                             With over 20 years of experience living, studying, and working in Finland, I bring a rich blend of professional and personal insights to my coaching and mentoring services. My journey spans multiple disciplines, including engineering, teaching, and coaching, giving me a holistic perspective on both personal and organizational development.
@@ -39,8 +78,26 @@ const About = () => {
 
                     </div>
                 </div>
-                <div className="flex">
-                    
+                <div className="my-10 flex flex-row flex-wrap justify-center gap-10">
+
+                    {educationContent.map((education, index) => (
+                        <div
+                            key={index}
+                            className="flex justify-center gap-4 rounded-2xl p-4 shadow-lg transition-all duration-300 hover:scale-105"
+                        >
+                            <Image
+                                src={education.image}
+                                alt={education.alt}
+                                width={50}
+                                height={50}
+                            />
+                            <div>
+                                <h4>{education.title}</h4>
+                                <p>{education.description}</p>
+                            </div>
+                        </div>
+                    ))}
+
                 </div>
             </div>
             <div className="container mx-auto flex justify-center">

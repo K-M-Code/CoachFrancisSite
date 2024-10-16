@@ -15,7 +15,7 @@ export async function GET(request: NextRequest, { params }: { params: { slug: st
             throw new Error('Ghost URL or API key is missing');
         }
 
-        const fetchUrl = `${ghostUrl}/ghost/api/content/posts/slug/${slug}/?key=${ghostKey}`;
+        const fetchUrl = `${ghostUrl}/ghost/api/content/posts/slug/${slug}/?key=${ghostKey}&include=tags`;
 
         const response = await fetch(fetchUrl);
 
@@ -26,6 +26,8 @@ export async function GET(request: NextRequest, { params }: { params: { slug: st
         }
 
         const data = await response.json();
+        // console.log('Response from Ghost API:', data);
+
 
         if (!data.posts || data.posts.length === 0) {
             return NextResponse.json({ error: 'Post not found' }, { status: 404 });

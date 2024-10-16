@@ -35,7 +35,7 @@ function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
 const Header = () => {
   return (
   <>
-      <header className='w-full bg-white z-50 sticky top-0 shadow-md'>
+      <header className='sticky top-0 z-50 w-full bg-white shadow-md'>
       <div className='container mx-auto'>
         <div className='flex items-center justify-between px-4 py-2'>
           <Link href='/' className='flex items-center gap-2' prefetch={false}>
@@ -57,18 +57,18 @@ const Header = () => {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant='menu' size='icon' className='lg:hidden'>
-                <MenuIcon className='h-6 w-6' />
+                <MenuIcon className='size-6' />
                 <span className='sr-only'>Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side='right'>
-              <div className="flex flex-col justify-between h-[90vh] mt-8">
+              <div className="mt-8 flex h-[90vh] flex-col justify-between">
                 <div className='grid w-[200px] gap-4'>
                   {siteLinks.map(route => (
                     <Link
                       key={route.label}
                       href={route.href}
-                      className='uppercase my-4 pl-4 border-l-4 border-primary hover:border-secondary hover:text-secondary'
+                      className='my-4 border-l-4 border-primary pl-4 uppercase hover:border-secondary hover:text-secondary'
                       prefetch={false}
                     >
                       {route.label}
