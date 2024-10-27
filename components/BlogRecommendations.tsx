@@ -24,7 +24,7 @@ const postsRecommendation: Post[] = await responseRecommendation.json();
 
 const articles: BlogArticle[] = postsRecommendation.map((post) => ({
     title: post.title,
-    category: post.tags[0]?.name || 'Unknown',
+    category: post.tags[0]?.name || 'Error',
     imageSrc: post.feature_image || '/public/images/article1.jpg',
     description: 'Read More',
     link: `/blog/${post.slug}`
@@ -60,18 +60,20 @@ return (
             />
             <div className='p-4'>
             <h4 className='line-clamp-3 h-24'>{article.title}</h4>
-            <p className='my-2 uppercase text-secondary'>
+            <div className="flex flex-col gap-4">
+            <span className='mr-2 w-fit rounded-full bg-secondary px-4 py-1 uppercase text-black'>
                 {article.category}
-            </p>
+            </span>
                 <Link
                 href={`${article.link}`}
-                className='group/read-more inline-flex items-center rounded-full bg-primary px-4 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-black hover:shadow-lg'
+                className='group/read-more inline-flex w-fit items-center rounded-full bg-primary px-4 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-black hover:shadow-lg'
                 >
                 Read More
                 <span className='ml-2 text-xl text-secondary transition-all duration-300 group-hover/read-more:text-black'>
                     ↗
                 </span>
                 </Link>
+            </div>
             </div>
         </div>
         ))}
