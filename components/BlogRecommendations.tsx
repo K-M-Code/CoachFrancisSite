@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { StaticImageData } from 'next/image'
 import { getPostsByTag } from '@/app/api/blog/getPostsByTag'
 import type { Post } from '@/app/api/blog/types';
+import excludedTags from '@/components/excludedTags';
 
 
 type BlogArticle = {
@@ -24,7 +25,7 @@ const postsRecommendation: Post[] = await responseRecommendation.json();
 
 const articles: BlogArticle[] = postsRecommendation.map((post) => ({
     title: post.title,
-    category: post.tags[0]?.name || 'Error',
+    category: post.tags.find((tag) =>!excludedTags.includes(tag.name))?.name || 'Article',
     imageSrc: post.feature_image || '/public/images/article1.jpg',
     description: 'Read More',
     link: `/blog/${post.slug}`

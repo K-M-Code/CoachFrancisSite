@@ -40,7 +40,7 @@
                     <div className='flex items-center justify-center'>
                     <span className='mr-4 w-12 border-t-4 border-secondary'></span>
                     <h4 className='uppercase text-secondary'>
-                        {post.primary_tag ? post.primary_tag.name : 'Untitled'}
+                        {'Highlight'}
                     </h4>
                     </div>
                 </div>

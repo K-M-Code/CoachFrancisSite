@@ -1,6 +1,7 @@
 import { getAllBlogPosts } from '@/app/api/blog/getAllBlogPosts'
 import Image from 'next/image'
 import Link from 'next/link'
+import excludedTags from '@/components/excludedTags'
 
 interface Post {
   id: string
@@ -17,12 +18,11 @@ interface Post {
 
 const DummyImage = () => (
   <div className='relative h-72 w-full animate-pulse bg-gray-300' />
-);
+)
 
 const DummyText = () => (
   <div className='mb-6 line-clamp-4 h-12 animate-pulse bg-gray-300 lg:line-clamp-2' />
-);
-
+)
 
 export default async function BlogPage() {
   const response = await getAllBlogPosts()
@@ -55,14 +55,21 @@ export default async function BlogPage() {
                     {post.title || <DummyText />}
                   </h3>
                   <div className='mb-4 flex flex-wrap gap-2'>
-                    {(post.tags && post.tags.length > 0) ? post.tags.map(tag => (
-                      <span
-                        key={tag.name}
-                        className='mr-2 rounded-full bg-secondary px-4 py-1 uppercase text-black'
-                      >
-                        {tag.name}
-                      </span>
-                    )) : <DummyText />}
+                    {post.tags.filter(tag => !excludedTags.includes(tag.name))
+                      .length > 0 ? (
+                      post.tags
+                        .filter(tag => !excludedTags.includes(tag.name))
+                        .map(tag => (
+                          <span
+                            key={tag.name}
+                            className='mr-2 rounded-full bg-secondary px-4 py-1 uppercase text-black'
+                          >
+                            {tag.name}
+                          </span>
+                        ))
+                    ) : (
+                      <DummyText />
+                    )}
                   </div>
                   <p className='mb-6 line-clamp-4 lg:line-clamp-2'>
                     {post.custom_excerpt || <DummyText />}

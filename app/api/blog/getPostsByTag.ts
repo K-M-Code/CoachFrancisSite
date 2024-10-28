@@ -5,7 +5,11 @@ export async function getPostsByTag(tag: string) {
     const ghostUrl = process.env.GHOST_URL as string;
     const ghostKey = process.env.GHOST_KEY as string;
 
-    const response = await fetch(`${ghostUrl}/ghost/api/content/posts/?key=${ghostKey}&limit=all&include=tags&filter=tags%3A${tag}`);
+    const response = await fetch(`${ghostUrl}/ghost/api/content/posts/?key=${ghostKey}&limit=all&include=tags&filter=tags%3A${tag}`, {
+      headers: {
+        'Cache-Control': 'no-store', // Ensures no caching on the server or client
+      },
+    });
 
     if (!response.ok) {
       throw new Error(`Failed to fetch posts: ${response.statusText}`);
