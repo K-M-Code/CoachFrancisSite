@@ -84,3 +84,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
         notFound();
     }
 }
+
+
+export const revalidate = 0
