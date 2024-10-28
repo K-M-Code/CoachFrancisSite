@@ -55,6 +55,7 @@ const Footer = () => {
                         </div>
                         <div className='flex flex-col gap-4'>
                             <p className='text-base'>Copyright © 2024 Francis Oyeyiola</p>
+                            <p className='text-base'><Link href='/privacy-policy'>Privacy Policy</Link></p>
                             <p className='text-base'>
                                 Designed & developed by{' '}
                                 <a href='https://kunalmenon.com'>Kunal Menon</a>
