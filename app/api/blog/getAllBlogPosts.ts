@@ -7,7 +7,11 @@ export async function getAllBlogPosts() {
     const ghostKey = process.env.GHOST_KEY as string;
 
     // Fetch data from Ghost CMS
-    const response = await fetch(`${ghostUrl}/ghost/api/content/posts/?key=${ghostKey}&limit=all&include=tags,authors`);
+    const response = await fetch(`${ghostUrl}/ghost/api/content/posts/?key=${ghostKey}&limit=all&include=tags,authors`, {
+      headers: {
+        'Cache-Control': 'no-store', // Prevent caching
+      },
+    });
 
 
     if (!response.ok) {
