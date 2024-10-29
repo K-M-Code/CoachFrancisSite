@@ -12,7 +12,7 @@
             {postsHighlight.map((post: Post, index: number) => (
             <div
                 key={index}
-                className='grid grid-cols-1 items-center gap-10 px-4 md:px-10 lg:grid-cols-2'
+                className='my-10 grid grid-cols-1 items-center gap-10 px-4 md:px-10 lg:grid-cols-2'
             >
                 <div className=''>
                 {post.feature_image ? (
