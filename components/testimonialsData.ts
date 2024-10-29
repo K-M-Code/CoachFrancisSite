@@ -6,7 +6,11 @@ import Anjan from '@/public/images/testimonials/Anjan Bayalkoti.jpg';
 import Cathy from '@/public/images/testimonials/Cathy Leonelle.jpg';
 import Uche from '@/public/images/testimonials/Uchechukwu Unachukwu.jpg';
 import Rhoda from '@/public/images/testimonials/Rhoda.jpg';
+import Raluca from '@/public/images/testimonials/Raluca Karhutalvi.jpg';
+import Anni from '@/public/images/testimonials/Anni Niemi.jpg'
+import Ruben from '@/public/images/testimonials/Reuben Odotei.jpg';
 import MaleIcon from '@/public/images/icons/male1.svg';
+// import FemaleIcon from '@/public/images/icons/female1.svg';
 
 const testimonialsData = [
       {
@@ -93,6 +97,27 @@ const testimonialsData = [
         position: '',
         photo: MaleIcon.src,
       },
+      {
+        quote:
+          "I am incredibly lucky to have met Francis during our educational studies a few years ago. He has been instrumental in helping me polish my compass and navigate both my professional and personal life journeys. Francis possesses a unique ability to see beyond the professional identity and the polished surface, recognizing the person behind it all. He offers insights and guidance that are invaluable and will give you clarity, confidence, and a renewed sense of purpose.  I wholeheartedly recommend Francis to anyone seeking a coach who truly understands and nurtures the whole person. Thank you, Coach Oye, for being a friend and a beacon of light on my journey.",
+        name: 'Anni Niemi',
+        position: 'Fashion Designer / Vocational Teacher',
+        photo: Anni.src,
+      },
+      {
+        quote:
+          "With both meaningful life experience and deep knowledge, Francis guided me from uncertainty to opportunities, helping to clarify the complex process of career development in Finland. His empathic and kind nature stands out and made me feel safe, supported, confident motivated. I discovered a positive individual, a professional fully dedicated to help and inspire ❤.",
+        name: 'Raluca Karhutalvi',
+        position: 'Psychologist',
+        photo: Raluca.src,
+      },
+      {
+        quote:
+          "Based on the recommendations I received from Francis, I applied to 5 positions in one company and out of the 5 I received 4 interviews with 3 offers .Although these were trainee positions, I felt this was a step in the right direction since this will be a stepping stone into permanent position in the company. I rejected two offers and accepted an offer in Logistics. I am currently employed permanently in Wartsila Finland as a Delivery Coordinator. My inspiring story got featured in Helsink Kauppalehti which is the biggest commerce newspaper in Finland.",
+        name: 'Reuben Odotei',
+        position: 'Delivery Coordinator, Wartsila',
+        photo: Ruben.src,
+      }
     ];
 
 

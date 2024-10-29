@@ -5,6 +5,7 @@
     import ServicePic4 from '@/public/images/services/publicspeaking2.jpg'
     import ServicesList from '@/components/ServicesList'
     import ContactForm from '@/components/ContactForm'
+    import Testimonials from '@/components/Testimonials'
 
     const Services = () => {
     return (
@@ -78,10 +79,12 @@
             
                 
             
-            <div className="container mx-auto my-8 flex justify-center">
+            <div className="container mx-auto mb-32 flex justify-center">
                 <ContactForm showTrigger={true}/>
             </div>
         </div>
+
+            <Testimonials />
         </section>
     )
     }
