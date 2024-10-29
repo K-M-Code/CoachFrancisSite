@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Coach Oye",
-  description: "Coach Francis Oye",
-};
-
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+// import { openGraphImage } from './shared-metadata'
+
+
+export const metadata: Metadata = {
+  title: "Coach Oye",
+  description: "Your Path, Your Pace. Let's Navigate Together. Personalized Coaching & Consulting for Extraordinary Results. Unlock Your Potential. Achieve Your Goals.",
+}
 
 export default function RootLayout({
   children,
