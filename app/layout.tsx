@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://coachme2.fi/",
     images: [
       {
-        url: "/images/logo.jpg",
+        url: "https://coachme2.fi/images/logo.jpg",
         width: 1200,
         height: 630,
         alt: "Coach Oye Logo",
