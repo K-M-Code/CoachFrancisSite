@@ -4,12 +4,21 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
 
-// import { openGraphImage } from './shared-metadata'
+import logoImage from '@/public/images/logo.svg'
 
 
 export const metadata: Metadata = {
   title: "Coach Oye",
   description: "Your Path, Your Pace. Let's Navigate Together. Personalized Coaching & Consulting for Extraordinary Results. Unlock Your Potential. Achieve Your Goals.",
+  openGraph: {
+    images: [
+      {
+        url: logoImage.src,
+        width: 1200,
+        height: 630
+      }
+    ]
+  }
 }
 
 export default function RootLayout({
