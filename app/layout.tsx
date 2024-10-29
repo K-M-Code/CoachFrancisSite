@@ -4,21 +4,27 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
 
-import logoImage from '@/public/images/logo.svg'
+// import logoImage from '@/public/images/logo.svg'
 
 
 export const metadata: Metadata = {
   title: "Coach Oye",
   description: "Your Path, Your Pace. Let's Navigate Together. Personalized Coaching & Consulting for Extraordinary Results. Unlock Your Potential. Achieve Your Goals.",
+  keywords: [],
   openGraph: {
+    title: "Coach Oye",
+    description: "Your Path, Your Pace. Let's Navigate Together. Personalized Coaching & Consulting for Extraordinary Results. Unlock Your Potential. Achieve Your Goals.",
+    url: "https://coachme2.fi/",
     images: [
       {
-        url: logoImage.src,
+        url: "/images/logo.jpg",
         width: 1200,
-        height: 630
-      }
-    ]
-  }
+        height: 630,
+        alt: "Coach Oye Logo",
+      },
+    ],
+  },
+
 }
 
 export default function RootLayout({
