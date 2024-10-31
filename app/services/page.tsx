@@ -7,6 +7,10 @@
     import ContactForm from '@/components/ContactForm'
     import Testimonials from '@/components/Testimonials'
 
+    export const metadata = {
+        title: "Coach Oye - Services",
+    }
+
     const Services = () => {
     return (
         <section id='servicesPage' className=''>

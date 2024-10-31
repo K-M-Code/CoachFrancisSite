@@ -5,16 +5,20 @@ import Image from 'next/image'
 import ContactImage1 from '@/public/images/logo.svg'
 import ContactImage2 from '@/public/images/services/Services6.jpg'
 
+export const metadata = {
+    title: "Coach Oye - Contact",
+}
+
 const Contact = () => {
 return (
     <section id='contactPage'>
-    <div className="w-full h-56 bg-cover bg-center -mt-4" style={{ backgroundImage: `url(${ContactImage2.src})` }}>
+    <div className="-mt-4 h-56 w-full bg-cover bg-center" style={{ backgroundImage: `url(${ContactImage2.src})` }}>
         <div className="container mx-auto mb-4">
         </div>
     </div>
     <div className="container mx-auto my-20 px-4">
-        <div className="flex flex-col lg:flex-row border-t-2 border-b-2 border-black gap-10">
-            <div className="w-full flex flex-col justify-center p-8 border-b-2 lg:border-b-0 lg:border-r-2 border-black">
+        <div className="flex flex-col gap-10 border-y-2 border-black lg:flex-row">
+            <div className="flex w-full flex-col justify-center border-b-2 border-black p-8 lg:border-b-0 lg:border-r-2">
                 <Image
                     src={ContactImage1}
                     alt="Contact Image"

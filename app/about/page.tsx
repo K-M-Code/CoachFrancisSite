@@ -7,6 +7,12 @@ import UniVaasa from '@/public/images/education/univaasa.jpeg'
 import Hanken from '@/public/images/education/hanken.jpeg'
 import VAMK from '@/public/images/education/vamk.jpeg'
 
+
+export const metadata = {
+    title: "Coach Oye - About",
+}
+
+
 const educationContent = [
     {
         image: Abo.src,

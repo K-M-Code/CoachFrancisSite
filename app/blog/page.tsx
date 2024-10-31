@@ -3,6 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import excludedTags from '@/components/excludedTags'
 
+
+export const metadata = {
+  title: "Coach Oye - Blog",
+}
+
 interface Post {
   id: string
   title: string
