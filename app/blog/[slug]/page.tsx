@@ -21,13 +21,13 @@
                 metadata: {
                     title: "Coach Oye - " +data.title,
                     description: data.custom_excerpt,
-                    openGraph: {
-                        images: [
-                            {
-                                url: data.feature_image
-                            }
-                        ]
-                    }
+                    // openGraph: {
+                    //     images: [
+                    //         {
+                    //             url: data.feature_image
+                    //         }
+                    //     ]
+                    // }
                 },
                 post: data
             };
