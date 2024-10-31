@@ -5,10 +5,6 @@ import Image from 'next/image'
 import ContactImage1 from '@/public/images/logo.svg'
 import ContactImage2 from '@/public/images/services/Services6.jpg'
 
-export const metadata = {
-    title: "Coach Oye - Contact",
-}
-
 const Contact = () => {
 return (
     <section id='contactPage'>
