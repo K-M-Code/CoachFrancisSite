@@ -1,5 +1,6 @@
 // components/HomeHero.tsx
 import Image from 'next/image';
+// import HeroImage from '@/public/images/self/IMG_4248_1.jpg';
 import HeroImage from '@/public/images/hero.jpg';
 
 const HomeHero = () => {

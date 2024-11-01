@@ -35,7 +35,7 @@ const Footer = () => {
         {
             icon: InstagramIcon,
             alt: 'Coach Oye Instagram',
-            href: 'https://www.instagram.com/coachoye_productions/',
+            href: 'https://www.instagram.com/coach_oye/',
             color: 'text-pink-500',
         }
     ];
