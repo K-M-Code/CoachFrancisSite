@@ -15,13 +15,13 @@ const HomeHero = () => {
         src={HeroImage}
         alt=""
         fill={true}
-        className='object-cover ml-auto'
+        className='ml-auto object-cover'
       />
-        <div className="absolute top-1/2 left-2 right-2 sm:left-10 sm:right-10  -translate-y-1/4 flex flex-col gap-4 lg:gap-10">
+        <div className="absolute inset-x-2 top-1/2 flex -translate-y-1/4 flex-col  gap-4 sm:inset-x-10 lg:gap-10">
           {heroBannerContent.map((text, index) => (
             <span
               key={index}
-              className="bg-secondary box-decoration-clone px-4 py-2 w-fit text-2xl lg:text-2xl 2xl:text-4xl font-semibold text-slate-900 "  
+              className="w-fit bg-secondary box-decoration-clone px-4 py-2 text-2xl font-semibold text-slate-900 lg:text-2xl 2xl:text-4xl "  
             >
               {text}<br />
             </span>

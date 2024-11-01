@@ -54,10 +54,10 @@
                 <div className=''>
                     <Link
                     href={`/blog/${post.slug}`}
-                    className='group my-4 inline-block rounded-lg bg-primary p-4 text-white transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-black hover:shadow-lg'
+                    className='group/read-more inline-flex w-fit items-center rounded-full bg-primary px-4 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-black hover:shadow-lg'
                     >
                     Read More
-                    <span className='ml-2 text-xl text-secondary transition-all duration-300 group-hover:text-black'>
+                    <span className='ml-2 text-xl text-secondary transition-all duration-300 group-hover/read-more:text-black'>
                         ↗
                     </span>
                     </Link>
