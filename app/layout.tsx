@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
+import Script from 'next/script';
 
 // import logoImage from '@/public/images/logo.svg'
 
@@ -65,7 +66,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <script defer src="https://umami.coachme2.fi/script.js" data-website-id="7eec9d24-5231-4747-b282-020b224c87b0"></script>
+    <Script 
+      src="https://umami.coachme2.fi/script.js" 
+      data-website-id="7eec9d24-5231-4747-b282-020b224c87b0"
+      strategy="afterInteractive"
+    />
       <body>
         <Header />
         <main>{children}</main>
