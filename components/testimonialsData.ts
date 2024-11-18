@@ -10,6 +10,8 @@ import Raluca from '@/public/images/testimonials/Raluca Karhutalvi.jpg';
 import Anni from '@/public/images/testimonials/Anni Niemi.jpg'
 import Ruben from '@/public/images/testimonials/Reuben Odotei.jpg';
 import MaleIcon from '@/public/images/icons/male1.svg';
+import Anne from '@/public/images/testimonials/Anne Bilen.jpg';
+
 // import FemaleIcon from '@/public/images/icons/female1.svg';
 
 const testimonialsData = [
@@ -117,6 +119,13 @@ const testimonialsData = [
         name: 'Reuben Odotei',
         position: 'Delivery Coordinator, Wartsila',
         photo: Ruben.src,
+      },
+      {
+        quote:
+          "I have worked with Francis in several different projects and events promoting international recruitments and integration to Finnish work life. Francis is a professional, an outstanding speaker and a host, a versatile performer taking the audience into account in each unique event. Francis has built his own experiences to his strength and is using these strengths to help others along the way. Both individuals and whole work communities can gain benefit from Francis's experiences.",
+        name: 'Anne Bilen',
+        position: 'Talent Coastline Coordinator, Ostrobothnian ELY-center',
+        photo: Anne.src,
       }
     ];
 
