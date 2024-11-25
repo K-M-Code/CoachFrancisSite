@@ -11,6 +11,7 @@ import Anni from '@/public/images/testimonials/Anni Niemi.jpg'
 import Ruben from '@/public/images/testimonials/Reuben Odotei.jpg';
 import MaleIcon from '@/public/images/icons/male1.svg';
 import Anne from '@/public/images/testimonials/Anne Bilen.jpg';
+import Reka from '@/public/images/testimonials/Reka.jpg'
 
 // import FemaleIcon from '@/public/images/icons/female1.svg';
 
@@ -126,6 +127,13 @@ const testimonialsData = [
         name: 'Anne Bilen',
         position: 'Talent Coastline Coordinator, Ostrobothnian ELY-center',
         photo: Anne.src,
+      },
+      {
+        quote:
+          "The major change in my application was fine tuning my CV based on your quick suggestions and implementing EVERYTHING that I learned on the Cover Letter workshop, and well, it seems like it worked out pretty well!! Thank you for your help, and especially that you did not organize the WS exclusively for VAMK students only! Thinking of you with gratitude.",
+        name: 'Réka',
+        position: 'VAMK Student',
+        photo: Reka.src,
       }
     ];
 
