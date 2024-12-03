@@ -11,7 +11,8 @@ import Anni from '@/public/images/testimonials/Anni Niemi.jpg'
 import Ruben from '@/public/images/testimonials/Reuben Odotei.jpg';
 import MaleIcon from '@/public/images/icons/male1.svg';
 import Anne from '@/public/images/testimonials/Anne Bilen.jpg';
-import Reka from '@/public/images/testimonials/Reka.jpg'
+import Reka from '@/public/images/testimonials/Reka.jpg';
+import Tina from '@/public/images/testimonials/Tina Nylund.jpg';
 
 // import FemaleIcon from '@/public/images/icons/female1.svg';
 
@@ -134,6 +135,13 @@ const testimonialsData = [
         name: 'Réka',
         position: 'VAMK Student',
         photo: Reka.src,
+      },
+      {
+        quote:
+          "Francis is truly an inspiring and insightful speaker. He has the unique ability to combine science and own experiences in an excellent way. It has been my pleasure to share the stage with him during several events.",
+        name: 'Tina Nylund',
+        position: 'CEO/PPLE The People Company Ab Oy',
+        photo: Tina.src,
       }
     ];
 
