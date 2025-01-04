@@ -12,7 +12,14 @@ import useEmblaCarousel from 'embla-carousel-react';
 import AutoPlay from 'embla-carousel-autoplay';
 import {  useEffect, useCallback } from "react";
 import testimonialsData from '@/components/testimonialsData';
-
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 const Testimonials = () => {
 
@@ -23,7 +30,6 @@ const Testimonials = () => {
     inViewThreshold: 0.7,
   });
 
-  // Removed unused scrollTo
   const onSelect = useCallback(() => {
     if (!embla) return;
   }, [embla]);
@@ -54,29 +60,44 @@ const Testimonials = () => {
         >
           <CarouselContent className="h-full">
             {testimonialsData.map((testimonial, index) => (
-              <CarouselItem key={index} className=" lg:basis-1/2">
-                <Card className="bg-white text-black">
-                  <CardContent className="flex flex-col gap-4 p-6">
-                    <p className="line-clamp-[11] sm:line-clamp-[9] lg:line-clamp-6">
-                      {testimonial.quote}
-                    </p>
-                    <div className="flex items-center gap-4">
-                      <Image
-                        src={testimonial.photo}
-                        alt={testimonial.name}
-                        width={50}
-                        height={50}
-                        className="rounded-full"
-                      />
-                      <div>
-                        <h3 className="font-semibold">{testimonial.name}</h3>
-                        <p className="text-sm text-gray-600">
-                          {testimonial.position}
+              <CarouselItem key={index} className="lg:basis-1/2">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Card className="cursor-pointer bg-white text-black">
+                      <CardContent className="flex flex-col gap-4 p-6">
+                        <p className="line-clamp-[4] min-h-[130px]">
+                          {testimonial.quote}
                         </p>
-                      </div>
+                        <div className="flex items-center gap-4">
+                          <Image
+                            src={testimonial.photo}
+                            alt={testimonial.name}
+                            width={50}
+                            height={50}
+                            className="rounded-full"
+                          />
+                          <div className="min-h-[85px]">
+                            <h3 className="font-semibold">{testimonial.name}</h3>
+                            <p className="text-sm text-gray-600">
+                              {testimonial.position}
+                            </p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader className='flex flex-row gap-4'>
+                      
+                    <Image src={testimonial.photo} alt={testimonial.name} width={50} height={50} className='rounded-full'></Image>
+                    <div>                      
+                    <DialogTitle>{testimonial.name}</DialogTitle>
+                      <DialogDescription>{testimonial.position}</DialogDescription>
                     </div>
-                  </CardContent>
-                </Card>
+                    </DialogHeader>
+                    <p className="whitespace-pre-line">{testimonial.quote}</p>
+                  </DialogContent>
+                </Dialog>
               </CarouselItem>
             ))}
           </CarouselContent>
