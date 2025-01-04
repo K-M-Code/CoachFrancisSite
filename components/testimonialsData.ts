@@ -14,7 +14,7 @@ import Anne from '@/public/images/testimonials/Anne Bilen.jpg';
 import Reka from '@/public/images/testimonials/Reka.jpg';
 import Tina from '@/public/images/testimonials/Tina Nylund.jpg';
 
-// import FemaleIcon from '@/public/images/icons/female1.svg';
+import FemaleIcon from '@/public/images/icons/female1.svg';
 
 const testimonialsData = [
       {
@@ -142,6 +142,13 @@ const testimonialsData = [
         name: 'Tina Nylund',
         position: 'CEO/PPLE The People Company Ab Oy',
         photo: Tina.src,
+      },
+      {
+        quote:
+          "Yesterday, Francis Oyeyiola delivered an insightful workshop on career development at Åbo Akademi University. He addressed the challenges of the employment situation in Finland, reminding us that while the current prospects may not seem promising, it’s essential to stay hopeful. Instead, he encouraged students to view these challenges as opportunities for personal growth. He emphasized the importance of embracing Finnish culture and understanding the Finnish way of life and workplace expectations. Francis also conducted CV reviews, offering practical advice on improving resumes, succeeding in job applications, and navigating the Finnish job market, highlighting effective strategies and common pitfalls to avoid. The workshop encouraged students to take proactive steps toward their goals, highlighting that a positive attitude can often make all the difference. Thank you, Francis, for inspiring students to take charge of their career journey! 🙌",
+        name: 'Farida Anwar',
+        position: 'University Lecturer at Åbo Akademi University',
+        photo: FemaleIcon.src,
       }
     ];
 
