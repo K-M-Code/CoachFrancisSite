@@ -62,7 +62,7 @@ const testimonialsData = [
       {
         quote:
           "Francis has definitely made my life in Finland much more enjoyable. Plus , he’s always positive and bubbly and full of positivity .. definitely learnt a lot from him 😁",
-        name: 'Uchechukwu Unachukwu',
+        name: 'Uchechukwu',
         position: 'VAMK',
         photo: Uche.src,
       },
